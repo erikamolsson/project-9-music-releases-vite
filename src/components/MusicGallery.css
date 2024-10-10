@@ -1,0 +1,44 @@
+
+/* Container for the album grid */
+.album-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    background-color: #333;
+}
+
+/* Individual album card styling */
+.album-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.album-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Styling for the album image */
+.album-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Album name styling */
+.album-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Album artist styling */
+.album-artist {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
