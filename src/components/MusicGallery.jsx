@@ -3,24 +3,41 @@ import data from '../data.json';
 import './MusicGallery.css';
 
 
+
+console.log(data);
+
 const MusicGallery = () => {
-    const [albums, setAlbums] = useState([]);
+    
+  /*   const [albums, setAlbums] = useState([]);
 
     // Load the data directly from the imported JSON file
     useEffect(() => {
-        setAlbums(albumData); // Directly use the imported data
+        setAlbums(data); // Directly use the imported data
     }, []);
-
+ */
     return (
+        <>
+        <div className="album-grid-container">
+          {data.albums.items.map((album) => (
+            <div key={album} className="album-card">
+                <img src={data.albums.images?.[0]?.url} alt={album.name} className="album-image" />
+                <h3 className="album-name">{data.albums.name}</h3>
+                <p className="album-artist">{data.albums.artist}</p>
+            </div>
+          ))}
+        </div>
+        </>
+
+    /* return (
         <div className="album-grid-container">
             {albums.map((album, index) => (
                 <div key={index} className="album-card">
-                    <img src={album.images[0]?.url} alt={album.name} className="album-image" />
-                    <h3 className="album-name">{album.name}</h3>
-                    <p className="album-artist">{album.artist}</p>
+                    <img src={data.albums.images?.[0]?.url} alt={album.name} className="album-image" />
+                    <h3 className="album-name">{data.albums.name}</h3>
+                    <p className="album-artist">{data.albums.artist}</p>
                 </div>
             ))}
-        </div>
+        </div> */
     );
 };
 

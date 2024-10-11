@@ -33,12 +33,12 @@
 .album-name {
     font-size: 1.2rem;
     margin: 10px 0;
-    color: #333;
+    color: #fff;
 }
 
 /* Album artist styling */
 .album-artist {
     font-size: 1rem;
-    color: #666;
+    color: #fff;
     margin-bottom: 15px;
 }
