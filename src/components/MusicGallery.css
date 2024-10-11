@@ -2,20 +2,20 @@
 /* Container for the album grid */
 .album-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; /* Space between grid items */
     padding: 20px;
     background-color: #333;
 }
 
 /* Individual album card styling */
-.album-card {
-    background-color: #f0f0f0;
+.album-card { 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s;
+
+    position: relative;
 }
 
 .album-card:hover {
@@ -25,8 +25,13 @@
 /* Styling for the album image */
 .album-image {
     width: 100%;
-    height: 200px;
+    height: 350px;
     object-fit: cover;
+    transition: filter 0.3s ease; /* Smooth transition effect for the image darkening */
+}
+
+.album-cover-hover:hover .album-image {
+  filter: brightness(50%); /* Darkens the image when hovered */
 }
 
 /* Album name styling */
@@ -35,6 +40,9 @@
     margin: 10px 0;
     color: #fff;
 }
+.album-name:hover {
+    color: #9b9b9b;
+}
 
 /* Album artist styling */
 .album-artist {
@@ -42,3 +50,23 @@
     color: #fff;
     margin-bottom: 15px;
 }
+.album-cover-icons {
+    position: absolute;
+    top: 40%; /* Adjust this value to control how far from the top the icons are */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px; /* Adjust the space between the icons */
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0; /* Hide the icons by default */
+    transition: opacity 0.3s ease; /* Smooth transition when showing/hiding */
+}
+  
+.album-cover-hover:hover .album-cover-icons {
+    opacity: 1; /* Show the icons when hovering over the image */
+}
+.album-cover-icons img {
+    cursor: pointer;
+    filter: invert(1);
+  }
