@@ -31,7 +31,13 @@ const MusicGallery = () => {
                     </div>
                 </div>
                 <h3 className="album-name">{album.name}</h3>
-                <p className="album-artist">{album.artists?.[0]}</p>
+                <div>
+                    <p className="album-artist">{album.artists.map((artist) => 
+                        <a href={artist.external_urls}>{artist.name}</a>
+                        )}
+                    </p>
+                </div>
+                {/* <p className="album-artist">{album.artists?.[0]}</p> */}
             </div>
           ))}
         </div>
