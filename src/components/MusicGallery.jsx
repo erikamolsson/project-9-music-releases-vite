@@ -30,9 +30,11 @@ const MusicGallery = () => {
                         <img src={dotsIcon} width="30" alt="Icon - Other" />
                     </div>
                 </div>
-                    <h3 className="album-name">
-                        {album.name}
-                    </h3>
+                    <a href={album.external_urls.spotify} target='_blank'>
+                        <h3 className="album-name">
+                            {album.name}
+                        </h3>
+                    </a>
                 <div>
                     <p className="album-artist">{album.artists.map((artist) => 
                         <a href={artist.external_urls.spotify} target='_blank'>{artist.name}</a>
@@ -43,17 +45,6 @@ const MusicGallery = () => {
           ))}
         </div>
         </>
-
-    /* return (
-        <div className="album-grid-container">
-            {albums.map((album, index) => (
-                <div key={index} className="album-card">
-                    <img src={data.albums.images?.[0]?.url} alt={album.name} className="album-image" />
-                    <h3 className="album-name">{data.albums.name}</h3>
-                    <p className="album-artist">{data.albums.artist}</p>
-                </div>
-            ))}
-        </div> */
     );
 };
 
