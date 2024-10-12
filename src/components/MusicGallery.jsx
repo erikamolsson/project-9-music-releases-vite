@@ -26,18 +26,19 @@ const MusicGallery = () => {
                     <img src={album.images?.[0]?.url} alt={album.name} className="album-image" />
                     <div className="album-cover-icons">
                         <img src={heartIcon} width="30" alt="Icon - Like album" />
-                        <img src={playIcon} width="60" alt="Icon - Play album" />
+                        <img src={playIcon} className="play-icon" width="60" alt="Icon - Play album" />
                         <img src={dotsIcon} width="30" alt="Icon - Other" />
                     </div>
                 </div>
-                <h3 className="album-name">{album.name}</h3>
+                    <h3 className="album-name">
+                        {album.name}
+                    </h3>
                 <div>
                     <p className="album-artist">{album.artists.map((artist) => 
-                        <a href={artist.external_urls}>{artist.name}</a>
+                        <a href={artist.external_urls.spotify} target='_blank'>{artist.name}</a>
                         )}
                     </p>
                 </div>
-                {/* <p className="album-artist">{album.artists?.[0]}</p> */}
             </div>
           ))}
         </div>
