@@ -20,7 +20,7 @@ const MusicGallery = () => {
     return (
         <>
         <div className="album-grid-container">
-          {data.albums.items.map((album) => (
+          { data.albums.items.map((album) => (
             <div key={album} className="album-card">
                 <div className="album-cover-hover">
                     <img src={album.images?.[0]?.url} alt={album.name} className="album-image" />
@@ -30,11 +30,9 @@ const MusicGallery = () => {
                         <img src={dotsIcon} width="30" alt="Icon - Other" />
                     </div>
                 </div>
-                    <a href={album.external_urls.spotify} target='_blank'>
-                        <h3 className="album-name">
-                            {album.name}
-                        </h3>
-                    </a>
+                <p className="album-name-container">
+                    <a className="album-name" href={album.external_urls.spotify} target='_blank'>{album.name}</a>
+                </p>
                 <div>
                     <p className="album-artist">{album.artists.map((artist) => 
                         <a href={artist.external_urls.spotify} target='_blank'>{artist.name}</a>

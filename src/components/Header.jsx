@@ -4,8 +4,10 @@ import "./Header.css"
 
 const Header = () => {
     return (
-        <header className="header-music">
-            <h1>Header</h1>
+        <header class="header-container">
+            <div class="header">
+                New Music Releases
+            </div>
         </header>
     );
 };

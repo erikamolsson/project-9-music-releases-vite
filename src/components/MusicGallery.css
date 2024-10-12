@@ -14,13 +14,12 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-
     position: relative;
 }
 
-.album-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
+/* .album-card:hover {
+    transform: scale(1.05); 
+} */
 
 /* Styling for the album image */
 .album-image {
@@ -32,23 +31,28 @@
 
 .album-cover-hover:hover .album-image {
   filter: brightness(50%); /* Darkens the image when hovered */
+  cursor: pointer;
 }
 
 /* Album name styling */
 .album-name {
     font-size: 14px;
-    margin: 10px 0 3px;
+    font-weight: 600;
+    margin: 7px 0 3px;
     color: #fff;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 .album-name:hover {
-    display: inline-block;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 /* Album artist styling */
+.album-name-container {
+    margin: 5px 0 3px;
+}
 .album-artist {
     font-size: 14px;
     color: #a0a0a0;
@@ -62,7 +66,7 @@
 }
 .album-artist a:hover {
     color: #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 .album-cover-icons {
     position: absolute;
