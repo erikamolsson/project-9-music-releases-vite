@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <MusicGallery />
+      <MusicGallery albums={data.albums.items} />
       <Footer />
     </>
   );

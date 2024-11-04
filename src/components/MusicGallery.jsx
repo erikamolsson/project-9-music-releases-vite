@@ -8,7 +8,7 @@ import playIcon from '../assets/icons/play.svg'
 
 console.log(data);
 
-const MusicGallery = () => {
+const MusicGallery = ({ albums }) => {
     
     /* const [albums, setAlbums] = useState([]);
 
@@ -20,8 +20,8 @@ const MusicGallery = () => {
     return (
         <>
         <div className="album-grid-container">
-          { data.albums.items.map((album) => (
-            <div key={album} className="album-card">
+          { albums.map((album) => (
+            <div key={album.id} className="album-card">
                 <div className="album-cover-hover">
                     <img src={album.images?.[0]?.url} alt={album.name} className="album-image" />
                     <div className="album-cover-icons">
