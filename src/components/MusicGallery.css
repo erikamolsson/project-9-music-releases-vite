@@ -3,7 +3,7 @@
 .album-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Space between grid items */
+    gap: 20px; 
     padding: 20px;
     background-color: #333;
 }
@@ -17,9 +17,6 @@
     position: relative;
 }
 
-/* .album-card:hover {
-    transform: scale(1.05); 
-} */
 
 /* Styling for the album image */
 .album-image {

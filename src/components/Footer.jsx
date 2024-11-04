@@ -3,10 +3,10 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <div className="footer-music">
+        <footer className="footer-music">
             <p>Made by: Erika Olsson</p>
             <p>Technigo / Web Development Boot Camp</p>
-        </div>
+        </footer>
     );
 };
 

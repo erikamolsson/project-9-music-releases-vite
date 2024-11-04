@@ -6,7 +6,7 @@
 }
 
 .header {
-    color: #FFFFFF; /* White text */
+    color: #fff;
     text-transform: uppercase;
     font-size: 4rem; 
     font-weight: 700;
@@ -14,7 +14,7 @@
     height: auto;
     border-bottom: #FFF solid 3px;
     border-top: #FFF solid 3px;
-    padding: 20px 35px; /* Padding around the text */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    padding: 20px 35px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin: 40px 10px;
 }
