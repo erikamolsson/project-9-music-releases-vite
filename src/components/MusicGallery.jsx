@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import data from '../data.json';
 import './MusicGallery.css';
 import dotsIcon from '../assets/icons/dots.svg'
@@ -9,13 +9,7 @@ import playIcon from '../assets/icons/play.svg'
 console.log(data);
 
 const MusicGallery = ({ albums }) => {
-    
-    /* const [albums, setAlbums] = useState([]);
 
-    // Load the data directly from the imported JSON file
-    useEffect(() => {
-        setAlbums(data); // Directly use the imported data
-    }, []); */
 
     return (
         <>
@@ -34,8 +28,17 @@ const MusicGallery = ({ albums }) => {
                     <a className="album-name" href={album.external_urls.spotify} target='_blank'>{album.name}</a>
                 </p>
                 <div>
-                    <p className="album-artist">{album.artists.map((artist) => 
-                        <a href={artist.external_urls.spotify} target='_blank'>{artist.name}</a>
+                    <p className="album-artist">
+                        {album.artists.map((artist, index) => 
+                        <a 
+                        key={artist.id}
+                        href={artist.external_urls.spotify} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                            {artist.name}
+                            {index < album.artists.length - 1 && ", "}
+                        </a>
                         )}
                     </p>
                 </div>
